@@ -1,0 +1,20 @@
+def shortest_palindrome(s):
+    rev_s = s[::-1]
+    for i in range(len(s) + 1):
+        if s.startswith(rev_s[i:]):
+            return rev_s[:i] + s
+
+# Example usage:
+s1 = "aacecaaa"
+s2 = "abcd"
+
+output1 = shortest_palindrome(s1)
+output2 = shortest_palindrome(s2)
+
+print("Example 1:")
+print("Input:", s1)
+print("Output:", output1)
+
+print("\nExample 2:")
+print("Input:", s2)
+print("Output:", output2)
